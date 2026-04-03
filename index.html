@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- These tags tell the browser how to read and scale the page. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- The title appears on the browser tab. -->
+    <title>Christina Lightfoot | Computer Engineering Portfolio</title>
+    <!-- Official Google-hosted fonts and icons used across the portfolio. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Manrope:wght@400;500;600;700;800&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
+    <!-- This links the shared CSS file to the page. -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- "defer" waits until the HTML is loaded before running the JavaScript. -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- This outer wrapper keeps the whole page centered on the screen. -->
+    <div class="site-shell">
+        <!-- The header is repeated on every page so the site feels consistent. -->
+        <header class="site-header">
+            <!-- This small group keeps your name and theme button side by side. -->
+            <div class="brand-group">
+                <a class="brand" href="index.html">
+                    <span class="brand-mark">CL</span>
+                    <span class="brand-text">
+                        <strong>Christina Lightfoot</strong>
+                        <span>Computer Engineering Student</span>
+                    </span>
+                </a>
+
+                <!-- The icon changes between dark and light mode in script.js. -->
+                <button class="theme-toggle" type="button" aria-label="Switch color theme">
+                    <span class="material-symbols-outlined theme-toggle-icon" aria-hidden="true">dark_mode</span>
+                </button>
+            </div>
+
+            <!-- Navigation gives visitors links to the main pages. -->
+            <nav class="site-nav" aria-label="Main navigation">
+                <a class="nav-link active" href="index.html">Home</a>
+                <a class="nav-link" href="about.html">About</a>
+                <a class="nav-link" href="projects.html">Projects</a>
+                <a class="nav-link" href="contact.html">Contact</a>
+            </nav>
+        </header>
+
+        <main>
+            <!-- The hero section is the top "intro" area of the homepage. -->
+            <section class="hero">
+                <div class="hero-copy">
+                    <p class="eyebrow"><span class="material-symbols-outlined icon" aria-hidden="true">school</span>Computer Engineering Student at Old Dominion University</p>
+                    <h1>Developing practical programming experience alongside a growing foundation in computer engineering.</h1>
+                    <p class="hero-text">
+                        I am pursuing a B.S. in Engineering with a concentration in Computer Engineering
+                        and a minor in Computer Science. My experience includes Java-based software
+                        projects, engineering coursework across programming and circuit analysis, and
+                        research focused on the broader impact of artificial intelligence.
+                    </p>
+
+                    <!-- These are styled links that act like buttons. -->
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="projects.html"><span class="material-symbols-outlined icon" aria-hidden="true">code_blocks</span>View Projects</a>
+                        <a class="button button-secondary" href="contact.html"><span class="material-symbols-outlined icon" aria-hidden="true">mail</span>Contact Me</a>
+                    </div>
+                </div>
+
+                <!-- "aside" is useful for extra information next to the main content. -->
+                <aside class="hero-panel">
+                    <p class="panel-label"><span class="material-symbols-outlined icon" aria-hidden="true">neurology</span>Current focus</p>
+                    <ul class="signal-list">
+                        <li>Java programming and problem solving</li>
+                        <li>C++ and Unix-based programming fundamentals</li>
+                        <li>Research, communication, and technical growth</li>
+                    </ul>
+                    <div class="status-box">
+                        <span class="status-dot"></span>
+                        Open to internships, research, and new technical opportunities
+                    </div>
+                </aside>
+            </section>
+
+            <!-- This timeline shows progress over time in a simple visual format. -->
+            <section class="section">
+                <div class="section-heading">
+                    <p class="eyebrow"><span class="material-symbols-outlined icon" aria-hidden="true">timeline</span>Experience Path</p>
+                    <h2>Recent milestones</h2>
+                </div>
+
+                <div class="timeline">
+                    <article class="timeline-item">
+                        <span class="timeline-year">2026</span>
+                        <div>
+                            <h3>Building depth in core engineering coursework</h3>
+                            <p>Continuing studies in areas such as circuit analysis, discrete structures, object-oriented programming in C++, and Unix for programmers.</p>
+                        </div>
+                    </article>
+                    <article class="timeline-item">
+                        <span class="timeline-year">2025</span>
+                        <div>
+                            <h3>SIEDS research presentation</h3>
+                            <p>Worked with a team to research artificial intelligence and its carbon footprint, then helped present the project at the 2025 SIEDS symposium.</p>
+                        </div>
+                    </article>
+                    <article class="timeline-item">
+                        <span class="timeline-year">2024</span>
+                        <div>
+                            <h3>Expanded software project experience</h3>
+                            <p>Built multiple Java projects including an interactive story generator, number guessing game, Wordle clone, and Tic-Tac-Toe game.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- The footer is the bottom area of the page. -->
+        <footer class="site-footer">
+            <p>Christina Lightfoot | Computer Engineering Portfolio</p>
+            <p>Showcasing academic projects, research experience, and developing technical skills.</p>
+        </footer>
+    </div>
+</body>
+</html>

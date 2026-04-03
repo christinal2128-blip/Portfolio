@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Shared files help all pages keep the same look and behavior. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Christina Lightfoot</title>
+    <!-- Official Google-hosted fonts and icons used across the portfolio. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Manrope:wght@400;500;600;700;800&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="site-shell">
+        <header class="site-header">
+            <div class="brand-group">
+                <a class="brand" href="index.html">
+                    <span class="brand-mark">CL</span>
+                    <span class="brand-text">
+                        <strong>Christina Lightfoot</strong>
+                        <span>Computer Engineering Student</span>
+                    </span>
+                </a>
+
+                <!-- This button changes the color theme using JavaScript. -->
+                <button class="theme-toggle" type="button" aria-label="Switch color theme">
+                    <span class="material-symbols-outlined theme-toggle-icon" aria-hidden="true">dark_mode</span>
+                </button>
+            </div>
+
+            <nav class="site-nav" aria-label="Main navigation">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="about.html">About</a>
+                <a class="nav-link active" href="projects.html">Projects</a>
+                <a class="nav-link" href="contact.html">Contact</a>
+            </nav>
+        </header>
+
+        <main>
+            <!-- Page intro explains what kind of work this page contains. -->
+            <section class="page-intro">
+                <p class="eyebrow"><span class="material-symbols-outlined icon" aria-hidden="true">deployed_code</span>Projects</p>
+                <h1>Selected programming and research work drawn from coursework and academic collaboration.</h1>
+                <p>
+                    These projects reflect my experience with Java programming, structured logic,
+                    testing, documentation, and research communication. Each one contributed to a
+                    different area of my technical development.
+                </p>
+            </section>
+
+            <!-- Each project is placed inside its own card to keep the layout organized. -->
+            <section class="project-grid">
+                <article class="project-card">
+                    <p class="project-type"><span class="material-symbols-outlined icon" aria-hidden="true">code</span>Java Project</p>
+                    <h2>Interactive Story Generator</h2>
+                    <p>
+                        Developed an interactive story generator using structured user input and dynamic
+                        branching logic to create more personalized narrative paths while reinforcing
+                        core software design habits.
+                    </p>
+                    <ul class="project-list">
+                        <li>Tools: Java, string manipulation, arithmetic operations</li>
+                        <li>Focus: adaptable program flow, readability, and organized code structure</li>
+                        <li>Result: an interactive program supported by documentation and clear design practices</li>
+                    </ul>
+                </article>
+
+                <article class="project-card">
+                    <p class="project-type"><span class="material-symbols-outlined icon" aria-hidden="true">code</span>Java Project</p>
+                    <h2>Wordle Game Clone</h2>
+                    <p>
+                        Built a Wordle-style word puzzle using nested loops and conditional statements
+                        to provide player feedback, input validation, and consistent game progress tracking.
+                    </p>
+                    <ul class="project-list">
+                        <li>Tools: Java, nested loops, conditional logic</li>
+                        <li>Focus: letter matching, usability, and error handling</li>
+                        <li>Result: smoother gameplay and clearer user feedback</li>
+                    </ul>
+                </article>
+
+                <article class="project-card">
+                    <p class="project-type"><span class="material-symbols-outlined icon" aria-hidden="true">lab_profile</span>Research</p>
+                    <h2>Artificial Intelligence and Its Carbon Footprint</h2>
+                    <p>
+                        Contributed to research examining the environmental effects of rising AI
+                        adoption, with attention to energy consumption trends and sustainability concerns.
+                    </p>
+                    <ul class="project-list">
+                        <li>Tools: data interpretation, research synthesis, technical writing</li>
+                        <li>Focus: environmental impact analysis and clear communication of results</li>
+                        <li>Result: co-authored paper and presentation at the 2025 SIEDS symposium</li>
+                    </ul>
+                    <!-- This link opens the paper PDF stored with the portfolio files. -->
+                    <p><a class="button button-primary" href="artificial-intelligence-carbon-footprint-paper.pdf" target="_blank"><span class="material-symbols-outlined icon" aria-hidden="true">description</span>View Paper PDF</a></p>
+                </article>
+            </section>
+
+            <section class="section">
+                <div class="section-heading">
+                    <p class="eyebrow"><span class="material-symbols-outlined icon" aria-hidden="true">article</span>Publication</p>
+                    <h2>Embedded research paper</h2>
+                </div>
+
+                <article class="content-card">
+                    <p>
+                        The full paper is embedded below so visitors can review it directly on the page.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="artificial-intelligence-carbon-footprint-paper.pdf" target="_blank" rel="noreferrer">
+                            <span class="material-symbols-outlined icon" aria-hidden="true">open_in_new</span>
+                            Open Paper
+                        </a>
+                        <a class="button button-secondary" href="artificial-intelligence-carbon-footprint-paper.pdf" download>
+                            <span class="material-symbols-outlined icon" aria-hidden="true">download</span>
+                            Download Paper
+                        </a>
+                    </div>
+
+                    <!-- This embedded viewer lets the paper appear directly on the page. -->
+                    <iframe
+                        class="document-frame"
+                        src="artificial-intelligence-carbon-footprint-paper.pdf"
+                        title="Artificial Intelligence and Its Carbon Footprint PDF">
+                    </iframe>
+                </article>
+            </section>
+
+            <section class="section">
+                <div class="section-heading">
+                    <p class="eyebrow"><span class="material-symbols-outlined icon" aria-hidden="true">terminal</span>Additional Work</p>
+                    <h2>Additional programming experience</h2>
+                </div>
+
+                <article class="content-card">
+                    <p>
+                        Additional Java projects include a Number Guessing Game built with random
+                        number generation and input validation, as well as a two-player Tic-Tac-Toe
+                        game using a 3x3 array, turn-based logic, win-condition checks, and error handling.
+                    </p>
+                </article>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <p>Christina Lightfoot | Computer Engineering Portfolio</p>
+            <p>This section can continue to grow with future coursework, projects, and internship experience.</p>
+        </footer>
+    </div>
+</body>
+</html>

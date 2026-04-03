@@ -1,0 +1,448 @@
+:root {
+    /* These are the main colors from your custom palette. */
+    --bg: #e5e7e6;
+    --card: #f8f4f2;
+    --text: #533745;
+    --muted: #6f5a62;
+    --accent: #c4a287;
+    --border: #d4c6bd;
+    /* These added variables control the extra visual polish. */
+    --accent-strong: #ab4e68;
+    --shadow: 0 10px 25px rgba(83, 55, 69, 0.12);
+    --hero-bg: linear-gradient(135deg, #f6eeea, #efe0d6);
+    /* These control theme-specific surfaces and readable button text. */
+    --header-bg: rgba(229, 231, 230, 0.88);
+    --soft-bg: #efe4dc;
+    --button-text: #533745;
+}
+
+body[data-theme="dark"] {
+    /* When JavaScript adds data-theme="dark", these colors replace the light ones. */
+    --bg: #533745;
+    --card: #62414f;
+    --text: #f7f2ef;
+    --muted: #dccfc8;
+    --accent: #b07156;
+    --border: #7a5a63;
+    /* Dark mode gets its own shadow and hero background. */
+    --accent-strong: #c4a287;
+    --shadow: 0 10px 25px rgba(0, 0, 0, 0.28);
+    --hero-bg: linear-gradient(135deg, #62414f, #533745);
+    --header-bg: rgba(83, 55, 69, 0.9);
+    --soft-bg: #6a4a57;
+    --button-text: #f7f2ef;
+}
+
+* {
+    /* This makes widths and heights easier to control. */
+    box-sizing: border-box;
+}
+
+body {
+    /* These are the default styles for the whole page. */
+    margin: 0;
+    font-family: "Manrope", Arial, sans-serif;
+    background:
+        radial-gradient(circle at top, rgba(176, 113, 86, 0.18), transparent 30%),
+        var(--bg);
+    color: var(--text);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--accent-strong);
+}
+
+p,
+li {
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+    margin-top: 0;
+    /* Fraunces gives headings a more expressive and styled look. */
+    font-family: "Fraunces", Georgia, serif;
+    letter-spacing: -0.03em;
+}
+
+.site-shell {
+    /* This keeps the page centered and stops it from getting too wide. */
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.site-header {
+    /* Flexbox lines up the logo, nav, and theme button. */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    margin-bottom: 24px;
+    background-color: var(--header-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(8px);
+}
+
+.brand-group {
+    /* This keeps the name and theme icon together on the left side. */
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-mark {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+    border-radius: 50%;
+    font-weight: bold;
+    color: white;
+    box-shadow: var(--shadow);
+}
+
+.brand-text span {
+    display: block;
+    color: var(--muted);
+    font-size: 15px;
+}
+
+.brand-text strong {
+    /* Making your name a little larger helps it stand out more. */
+    display: block;
+    font-size: 1.3rem;
+    font-family: "Fraunces", Georgia, serif;
+}
+
+.site-nav {
+    /* Flexbox also works well for navigation links in a row. */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.nav-link,
+.theme-toggle,
+.button {
+    /* These shared styles make links and buttons look consistent. */
+    padding: 10px 16px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background-color: var(--card);
+    font: inherit;
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nav-link.active {
+    background-color: var(--accent);
+    color: var(--text);
+}
+
+.nav-link {
+    /* Slightly larger nav text makes the tabs easier to notice. */
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+.nav-link:hover,
+.theme-toggle:hover,
+.button:hover {
+    /* This small hover effect makes the page feel more interactive. */
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+.theme-toggle {
+    cursor: pointer;
+    color: var(--text);
+    width: 46px;
+    height: 46px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.theme-toggle-icon {
+    /* The icon uses Google's Material Symbols font. */
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+.material-symbols-outlined {
+    /* These settings control how Google Material Symbols are drawn. */
+    font-variation-settings:
+        "FILL" 0,
+        "wght" 400,
+        "GRAD" 0,
+        "opsz" 24;
+}
+
+.icon {
+    /* Small inline icons help add personality without extra image files. */
+    display: inline-flex;
+    vertical-align: middle;
+    margin-right: 8px;
+    font-size: 1.1em;
+}
+
+.hero,
+.two-column,
+.feature-grid,
+.project-grid {
+    /* Grid is useful when you want columns instead of a single vertical stack. */
+    display: grid;
+    gap: 20px;
+}
+
+.hero {
+    /* The homepage intro has a wide left side and a smaller right side. */
+    grid-template-columns: 2fr 1fr;
+    margin-bottom: 24px;
+}
+
+.two-column {
+    /* This makes two equal columns. */
+    grid-template-columns: 1fr 1fr;
+}
+
+.feature-grid,
+.project-grid {
+    /* repeat(3, 1fr) means three equal columns. */
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.hero-copy,
+.hero-panel,
+.page-intro,
+.feature-card,
+.content-card,
+.project-card,
+.timeline-item {
+    /* These boxes all share the same "card" look. */
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: var(--shadow);
+}
+
+
+.hero-copy h1,
+.page-intro h1 {
+    margin-bottom: 12px;
+    line-height: 1.2;
+}
+
+.hero-copy {
+    /* The hero gets a soft gradient so the homepage stands out a little more. */
+    background: var(--hero-bg);
+}
+
+.hero-text,
+.feature-card p,
+.content-card p,
+.project-card p,
+.site-footer {
+    color: var(--muted);
+}
+
+.hero-actions,
+.tag-group {
+    /* This places buttons or tags next to each other with spacing. */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.button-primary {
+    background-color: var(--accent);
+    border-color: transparent;
+    color: var(--button-text);
+}
+
+.button-secondary {
+    /* This keeps the second button lighter than the main action button. */
+    background-color: var(--soft-bg);
+    color: var(--text);
+}
+
+.signal-list,
+.project-list {
+    padding-left: 20px;
+}
+
+.contact-box {
+    /* This narrows the contact form slightly so it feels more focused. */
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.document-frame {
+    /* This displays embedded PDFs directly on the page. */
+    width: 100%;
+    height: 720px;
+    margin-top: 18px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background-color: var(--soft-bg);
+}
+
+.contact-form {
+    /* The form stacks each label and field vertically. */
+    display: grid;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.contact-form label {
+    font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+    /* These form styles match the rest of the site's card design. */
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background-color: var(--soft-bg);
+    color: var(--text);
+    font: inherit;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: var(--muted);
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-note {
+    /* This places the LinkedIn option neatly under the form. */
+    margin-top: 18px;
+    text-align: center;
+}
+
+.contact-link {
+    color: var(--accent-strong);
+    font-weight: 600;
+}
+
+.form-status {
+    /* This text displays submission feedback under the form. */
+    min-height: 24px;
+    margin-top: 14px;
+    text-align: center;
+    color: var(--muted);
+    font-weight: 600;
+}
+
+.status-box {
+    margin-top: 16px;
+    padding: 12px;
+    background-color: var(--soft-bg);
+    border-radius: 8px;
+    border-left: 4px solid var(--accent-strong);
+}
+
+.eyebrow,
+.project-type,
+.panel-label {
+    color: var(--muted);
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.tag {
+    padding: 8px 12px;
+    background-color: var(--soft-bg);
+    border-radius: 999px;
+    border: 1px solid var(--border);
+}
+
+.feature-card,
+.project-card,
+.content-card,
+.timeline-item {
+    /* This top border gives each card a little more shape without adding complexity. */
+    border-top: 4px solid var(--accent);
+}
+
+.section,
+.page-intro,
+.project-grid,
+.hero {
+    margin-bottom: 24px;
+}
+
+.timeline {
+    display: grid;
+    gap: 16px;
+}
+
+.timeline-item {
+    /* The timeline has a narrow year column and a wider text column. */
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 16px;
+}
+
+.timeline-year {
+    font-weight: bold;
+    color: var(--accent-strong);
+}
+
+.site-footer {
+    text-align: center;
+    padding: 16px 0;
+}
+
+@media (max-width: 800px) {
+    /* Media queries change the layout on smaller screens like phones. */
+    .hero,
+    .two-column,
+    .feature-grid,
+    .project-grid,
+    .timeline-item {
+        grid-template-columns: 1fr;
+    }
+
+    .site-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .brand-group {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .document-frame {
+        height: 520px;
+    }
+
+}

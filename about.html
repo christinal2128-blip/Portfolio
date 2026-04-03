@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Every page repeats these basics: page setup, CSS, and JavaScript. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Christina Lightfoot</title>
+    <!-- Official Google-hosted fonts and icons used across the portfolio. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Manrope:wght@400;500;600;700;800&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="site-shell">
+        <header class="site-header">
+            <!-- Reusing the same header saves time and keeps the site easy to navigate. -->
+            <div class="brand-group">
+                <a class="brand" href="index.html">
+                    <span class="brand-mark">CL</span>
+                    <span class="brand-text">
+                        <strong>Christina Lightfoot</strong>
+                        <span>Computer Engineering Student</span>
+                    </span>
+                </a>
+
+                <!-- The same theme button appears on every page. -->
+                <button class="theme-toggle" type="button" aria-label="Switch color theme">
+                    <span class="material-symbols-outlined theme-toggle-icon" aria-hidden="true">dark_mode</span>
+                </button>
+            </div>
+
+            <nav class="site-nav" aria-label="Main navigation">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link active" href="about.html">About</a>
+                <a class="nav-link" href="projects.html">Projects</a>
+                <a class="nav-link" href="contact.html">Contact</a>
+            </nav>
+        </header>
+
+        <main>
+            <!-- This intro gives a quick summary of who you are. -->
+            <section class="page-intro">
+                <p class="eyebrow"><span class="material-symbols-outlined icon" aria-hidden="true">person</span>About Me</p>
+                <h1>Focused on building strong programming skills, technical discipline, and a thoughtful approach to engineering.</h1>
+                <p>
+                    I am a computer engineering student at Old Dominion University with a minor in
+                    Computer Science. My experience includes Java programming projects, academic
+                    research collaboration, and coursework in areas such as circuit analysis, digital
+                    electronics, object-oriented programming, and Unix-based development.
+                </p>
+            </section>
+
+            <section class="section two-column">
+                <!-- This article holds the main explanation text. -->
+                <article class="content-card">
+                    <h2><span class="material-symbols-outlined icon" aria-hidden="true">engineering</span>Engineering mindset</h2>
+                    <p>
+                        I am drawn to projects that require clear logic, organized structure, and
+                        reliable user interaction. Through programming assignments and personal work,
+                        I have focused on writing maintainable code, validating input, and improving
+                        software flow through testing and structured problem solving.
+                    </p>
+                    <p>
+                        I am also interested in how technology affects the broader world. That interest
+                        shaped my research on artificial intelligence and energy consumption, where I
+                        worked with a team to analyze findings, contribute to a written paper, and
+                        communicate the results through presentation.
+                    </p>
+                </article>
+
+                <!-- This side section shows skills as small labeled tags. -->
+                <aside class="content-card">
+                    <h2><span class="material-symbols-outlined icon" aria-hidden="true">construction</span>Skills</h2>
+                    <div class="tag-group">
+                        <span class="tag">Java</span>
+                        <span class="tag">C++</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">Unix</span>
+                        <span class="tag">Digital Electronics</span>
+                        <span class="tag">Circuit Analysis</span>
+                        <span class="tag">Technical Writing</span>
+                        <span class="tag">Problem Solving</span>
+                        <span class="tag">Microsoft 365</span>
+                        <span class="tag">Public Speaking</span>
+                    </div>
+                </aside>
+            </section>
+
+            <section class="section">
+                <!-- This area is focused on school information and coursework. -->
+                <div class="section-heading">
+                    <p class="eyebrow"><span class="material-symbols-outlined icon" aria-hidden="true">school</span>Education</p>
+                    <h2>Education and coursework</h2>
+                </div>
+
+                <article class="content-card">
+                    <h3>Old Dominion University</h3>
+                    <p>Bachelor of Science in Engineering | Concentration in Computer Engineering | Minor in Computer Science</p>
+                    <p>Expected Graduation: 2027</p>
+                    <p>
+                        Relevant coursework: Fundamentals of Computer Engineering, Circuit Analysis I,
+                        Object Oriented Programming in C++, Intro to Unix for Programmers, Intro to
+                        Discrete Structures, Digital Electronics, and Engineering Ethics and Safety.
+                    </p>
+                </article>
+            </section>
+
+            <section class="section">
+                <div class="section-heading">
+                    <p class="eyebrow"><span class="material-symbols-outlined icon" aria-hidden="true">description</span>Resume</p>
+                    <h2>Embedded resume</h2>
+                </div>
+
+                <article class="content-card">
+                    <p>
+                        A PDF copy of my March 2026 resume is embedded below for quick viewing. You can
+                        also open it in a new tab or download it directly.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="christina-lightfoot-resume-march-2026.pdf" target="_blank" rel="noreferrer">
+                            <span class="material-symbols-outlined icon" aria-hidden="true">open_in_new</span>
+                            Open Resume
+                        </a>
+                        <a class="button button-secondary" href="christina-lightfoot-resume-march-2026.pdf" download>
+                            <span class="material-symbols-outlined icon" aria-hidden="true">download</span>
+                            Download Resume
+                        </a>
+                    </div>
+
+                    <!-- This embedded viewer lets the PDF appear directly on the page. -->
+                    <iframe
+                        class="document-frame"
+                        src="christina-lightfoot-resume-march-2026.pdf"
+                        title="Christina Lightfoot Resume PDF">
+                    </iframe>
+                </article>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <p>Christina Lightfoot | Computer Engineering Portfolio</p>
+            <p>Based in Virginia Beach, Virginia and currently studying at Old Dominion University in Norfolk.</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- This page tells visitors how to contact you. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Christina Lightfoot</title>
+    <!-- Official Google-hosted fonts and icons used across the portfolio. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Manrope:wght@400;500;600;700;800&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="site-shell">
+        <header class="site-header">
+            <div class="brand-group">
+                <a class="brand" href="index.html">
+                    <span class="brand-mark">CL</span>
+                    <span class="brand-text">
+                        <strong>Christina Lightfoot</strong>
+                        <span>Computer Engineering Student</span>
+                    </span>
+                </a>
+
+                <!-- Keeping this button here makes the site behave the same on every page. -->
+                <button class="theme-toggle" type="button" aria-label="Switch color theme">
+                    <span class="material-symbols-outlined theme-toggle-icon" aria-hidden="true">dark_mode</span>
+                </button>
+            </div>
+
+            <nav class="site-nav" aria-label="Main navigation">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="about.html">About</a>
+                <a class="nav-link" href="projects.html">Projects</a>
+                <a class="nav-link active" href="contact.html">Contact</a>
+            </nav>
+        </header>
+
+        <main>
+            <!-- This intro explains the purpose of the contact page. -->
+            <section class="page-intro">
+                <p class="eyebrow"><span class="material-symbols-outlined icon" aria-hidden="true">mail</span>Contact</p>
+                <h1>Send me an email.</h1>
+                <p>
+                    If you would like to get in touch about opportunities, projects, or questions,
+                    you can use the form below to start an email message.
+                </p>
+            </section>
+
+            <section class="section">
+                <!-- This form sends to Formspree without showing personal contact details on the page. -->
+                <article class="content-card contact-box">
+                    <h2><span class="material-symbols-outlined icon" aria-hidden="true">forward_to_inbox</span>Email inquiry form</h2>
+                    <p>
+                        Use the form below to send a message directly from the site. This version is
+                        set up for Formspree, which is one of the simplest free form services for a
+                        static portfolio.
+                    </p>
+
+                    <!-- This form sends submissions through your Formspree endpoint. -->
+                    <form action="https://formspree.io/f/mnjogovy" method="post" class="contact-form" id="contact-form">
+                        <label for="name">Name</label>
+                        <input id="name" name="name" type="text" placeholder="Your name">
+
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" placeholder="your.email@example.com">
+
+                        <label for="subject">Subject</label>
+                        <input id="subject" name="subject" type="text" placeholder="What would you like to discuss?">
+
+                        <label for="message">Message</label>
+                        <textarea id="message" name="body" rows="8" placeholder="Write your message here."></textarea>
+
+                        <!-- This button submits the form through JavaScript without leaving the page. -->
+                        <button class="button button-primary contact-submit" type="submit"><span class="material-symbols-outlined icon" aria-hidden="true">send</span>Send Message</button>
+                    </form>
+
+                    <!-- This message area updates after the form is submitted. -->
+                    <p class="form-status" id="form-status" aria-live="polite"></p>
+
+                    <p class="contact-note">
+                        Prefer LinkedIn?
+                        <a class="contact-link" href="https://www.linkedin.com/in/christina-lightfoot-911471310" target="_blank" rel="noreferrer">
+                            Connect with me here
+                        </a>
+                    </p>
+                </article>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <p>Christina Lightfoot | Computer Engineering Portfolio</p>
+            <p>Portfolio content adapted from my resume and academic project experience.</p>
+        </footer>
+    </div>
+</body>
+</html>
